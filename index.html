@@ -1,585 +1,356 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Firmbee.com - Free Project Management for remote teams">
-    <title>Name of company</title>
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Style css -->
-    <link rel="stylesheet" href="Webdesign%2010/css/style.css">
+<title>Anika Tabassum | Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+font-family:Arial;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* Navbar */
+
+.navbar{
+background:#8b6f47 !important;
+}
+
+/* Hero Section */
+
+.hero-section{
+background-image:url("img/5.jpg");
+background-size:cover;
+background-position:left center;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+text-shadow:2px 2px 5px black;
+}
+
+.hero-section h1{
+font-size:50px;
+font-weight:bold;
+}
+
+/* Section title */
+
+h2{
+color:#6b4f2a;
+font-weight:bold;
+margin-bottom:30px;
+}
+
+/* About Image */
+
+.about-img{
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Achievements Section */
+
+#achievements{
+background:#e8d8c3;
+}
+
+.card{
+transition:0.3s;
+background:#d8c0a4;
+border:none;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+/* Footer */
+
+footer{
+margin-top:auto;
+background:#8b6f47;
+color:white;
+}
+
+</style>
+
 </head>
 
-<body data-spy="scroll" data-target="#navbar">
-    <!-- Navigation -->
-    <div class="row justify-content-end">
-        <div class="col-12 col-lg-7 col-xl-6 col-xxl-5">
-            <nav id="navbar" class="navbar navbar-expand-lg position-fixed top-0 ms-auto">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i id="mobile-toggler" class="bi bi-list"></i></span>
-                </button>
-                <button id="toggler" class="navbar-toggler navbar-toggler-big" type="button" data-toggle="collapse"
-                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"><i
-                        class="bi bi-list"></i></button>
-                <div class="collapse navbar-collapse shadow-bg" id="navbarNavAltMarkup">
-                    <div class="navbar-nav p-5">
-                        <a class="nav-item nav-link active text-center mx-3" href="#home">Home</a>
-                        <a class="nav-item nav-link text-center mx-3" href="#portfolio">Portfolios</a>
-                        <a class="nav-item nav-link text-center mx-3" href="#team">Team</a>
-                        <a class="nav-item nav-link text-center mx-3" href="#contact">Contact</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- First section -->
-    <div id="home" class="frontpage">
-        <div class="wrapper">
-            <header>
-                <div class="row">
-                    <div class="left col-12 col-lg-4">
-                        <div class="col-4 d-none d-lg-block">
-                            <div class="logo">
-                                <a href="#">
-                                    <img src="Webdesign%2010/img/goSM.png" alt="Logo">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="header">
-                                <div class="header-text">
-                                    <h1>
-                                        We <span class="highlighted">work</span> creatively
-                                    </h1>
-                                </div>
-                            </div>
-                            <div class="row justify-content-lg-start justify-content-center buttons">
-                                <div class="col-7 col-sm-3 col-lg-5">
-                                    <a class="main-button btn-view-portfolio text-center" href="#portfolio">View
-                                        portfolio</a>
-                                </div>
-                                <div class="col-7 col-sm-3 col-lg-5">
-                                    <a class="button text-center" href="#contact">Contact</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-lg-12">
-                                <div class="indicators">
-                                    <span class="indicator-main" onclick="currentSlide(1)"></span>
-                                    <span class="indicator-main" onclick="currentSlide(2)"></span>
-                                    <span class="indicator-main" onclick="currentSlide(3)"></span>
-                                    <span class="indicator-main" onclick="currentSlide(4)"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 ">
-                                <div class="d-none d-lg-block scroll-item">
-                                    <i class="bi bi-mouse me-2 align-middle"></i><span class="scroll-text">Scroll
-                                        down</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                        <div class="gallery">
-                            <div class="slide fade">
-                                <img src="Webdesign%2010/img/slides/woman.jpg" alt="woman">
-                            </div>
-                            <div class="slide fade">
-                                <img src="Webdesign%2010/img/slides/notebook.jpg" alt="notebook">
-                            </div>
-                            <div class="slide fade">
-                                <img src="Webdesign%2010/img/slides/man.jpg" alt="man">
-                            </div>
-                            <div class="slide fade">
-                                <img src="Webdesign%2010/img/slides/coffee.jpg" alt="coffee">
-                            </div>
-                            <div class="arrows d-none d-lg-block">
-                                <a class="arrow-right" onclick="plusSlides(1)"><i class="bi bi-arrow-right"></i></a>
-                                <a class="arrow-left" onclick="plusSlides(-1)"><i class="bi bi-arrow-left"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        </div>
-    </div>
+<body>
 
-    <main>
-        <!-- Second secrtion -->
-        <section>
-            <div id="accordion">
-                <div class="expertize container">
+<!-- Navbar -->
 
-                    <div class="cards row justify-content-between">
-                        <div class="col-3">
-                            <div id="headingOne" class="card" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                <i class="card-icon bi bi-lightbulb"></i>
-                                <p class="subtitles">Business <br> Development</p>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div id="headingTwo" class="card collapsed" data-toggle="collapse"
-                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="card-icon bi bi-palette2"></i>
-                                <p class="subtitles">Graphic <br> Design</p>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div id="headingThree" class="card collapsed" data-toggle="collapse"
-                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <i class="card-icon bi bi-diagram-3"></i>
-                                <p class="subtitles">Project <br> Management</p>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div id="headingThree" class="card collapsed" data-toggle="collapse"
-                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                <i class="card-icon bi bi-chat-dots"></i>
-                                <p class="subtitles">Marketing & <br> Study</p>
-                            </div>
-                        </div>
-                    </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">Anika Tabassum</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#achievements">Achievements</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
 
 
-                    <div id="collapseOne" class="content row collapse show" aria-labelledby="headingOne"
-                        data-parent="#accordion">
-                        <div class="col-12 col-lg-6">
-                            <h2>Business <br><span class="highlighted">Development</span></h2>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et corporis
-                                necessitatibus laborum soluta eligendi nesciunt ea nemo praesentium recusandae incidunt
-                                fugit minus, veniam unde omnis, numquam deleniti est tempora.
-                            </p>
-                        </div>
-                    </div>
+<!-- Hero Section -->
 
-                    <div id="collapseTwo" class="content row collapse" aria-labelledby="headingTwo"
-                        data-parent="#accordion">
-                        <div class="col-12 col-lg-6">
-                            <h2>Graphic <br><span class="highlighted">Design</span></h2>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <p>Quia et corporis necessitatibus laborum soluta eligendi nesciunt ea nemo praesentium
-                                recusandae incidunt
-                                fugit
-                                minus, veniam unde omnis, numquam deleniti est tempora.
-                            </p>
-                        </div>
-                    </div>
+<section id="home" class="hero-section">
 
-                    <div id="collapseThree" class="content row collapse" aria-labelledby="headingThree"
-                        data-parent="#accordion">
-                        <div class="col-12 col-lg-6">
-                            <h2>Project <br><span class="highlighted">Management</span></h2>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <p>Earum non iste quasi quia! Quas asperiores tempore aliquid doloremque fugiat
-                                quidem quia! Expedita, eligendi amet.</p>
-                        </div>
-                    </div>
+<div>
 
-                    <div id="collapseFour" class="content row collapse" aria-labelledby="headingFour"
-                        data-parent="#accordion">
-                        <div class="col-12 col-lg-6">
-                            <h2>Marketing &<br><span class="highlighted">Study</span></h2>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolorum
-                                aspernatur ipsa praesentium maiores totam, ipsam adipisci pariatur ad nihil!</p>
-                        </div>
-                    </div>
-                </div>
+<h1>Hello I'm Anika Tabassum</h1>
 
-            </div>
-        </section>
-        <!-- Second section -->
-        <section id="portfolio">
-            <!--  id only for scrolling -->
-            <div class="portfolio">
-                <div class="portfolio-header-area">
-                    <div class="container">
-                        <div class="portfolio-header">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-lg-4">
-                                    <h2>Portfolio</h2>
-                                </div>
-                                <div id="filters" class="col-12 col-lg-8">
-                                    <div class="row">
-                                        <div class="col-6 col-sm-3">
-                                            <button class="btn-portfolio active" data-filter="*">All projects</button>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <button class="btn-portfolio" data-filter=".c1">Brand</button>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <button class="btn-portfolio" data-filter=".c2">Webdesign</button>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <button class="btn-portfolio" data-filter=".c3">Social Media</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<p class="lead">Student | Future Engineer</p>
 
-                <div class="portfolio-body">
-                    <div class="container">
-                        <div class="row grid">
-                            <div class="col-sm-4 all c2">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w1.jpg" alt="Website">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Website</h3>
-                                        <p>Category 2</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c1">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w2.jpg" alt="Website">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Website</h3>
-                                        <p>Category 2</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c3">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w3.jpg" alt="Website">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Characters</h3>
-                                        <p>Category 3</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c2">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w4.jpg" alt="Brand">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Website</h3>
-                                        <p>Category 2</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c2">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w5.jpg" alt="Website">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Website</h3>
-                                        <p>Category 2</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c1">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w6.jpg" alt="Brand">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Brand</h3>
-                                        <p>Category 1</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c2">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="img/portfolio/w7.jpg" alt="Website">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Website</h3>
-                                        <p>Category 2</p>
-                                        <button class="see-more-button">See more</button>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c2">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="img/portfolio/w8.jpg" alt="Website">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Website</h3>
-                                        <p>Category 2</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c2">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w9.jpg" alt="Website">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Brand leaflet</h3>
-                                        <p>Category 2</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c3">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w10.jpg" alt="Social">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Characters</h3>
-                                        <p>Category 3</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c3">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w11.jpg" alt="Characters">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Characters</h3>
-                                        <p>Category 1</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 all c3">
-                                <figure class="hover-img">
-                                    <img class="img-fluid" src="Webdesign%2010/img/portfolio/w12.jpg" alt="Characters">
-                                    <div class="overlay"></div>
-                                    <div class="text">
-                                        <h3>Characters</h3>
-                                        <p>Category 3</p>
-                                        <a class="see-more-button" href="portfolio.html">See more</a>
-                                    </div>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <a id="load-more" class="main-button my-5">View more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<a href="#about" class="btn btn-light mt-3">Learn More</a>
+
+</div>
+
+</section>
 
 
+<!-- About -->
 
-        <!-- Third section -->
-        <section>
-            <div class=" clients">
-                <hr>
-                <div class="container">
-                    <div class="row clients-area align-items-center">
-                        <div class="col-12 col-lg-3 col-xl-4 mb-3">
-                            <h2>Clients</h2>
-                        </div>
-                        <div class="col-12 col-lg-9 col-xl-8">
-                            <div class="row align-items-end">
-                                <div class="col-12 col-sm-4">
-                                    <img src="Webdesign%2010/img/icons/firmbee.svg" alt="firmbee">
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <img class="client-img" src="Webdesign%2010/img/icons/create-paper.svg" alt="create paper">
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <img src="Webdesign%2010/img/icons/point-design.svg" alt="point design">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </div>
-        </section>
+<section id="about" class="p-5">
 
+<div class="container">
 
-        <!-- Fourth section -->
-        <section id="team">
-            <div class="team">
-                <div class="container">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-12 col-md-6">
-                            <h2>Our <span class="highlighted">Team</span></h2>
-                            <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sint,
-                                incidunt quos dolores cumque dolorem beatae quae obcaecati repudiandae qui voluptatum
-                                magnam temporibus saepe corporis laboriosam tempora, accusamus sed est atque commodi
-                                iure nulla itaque. <br><br> Impedit, doloremque fugiat. Eaque repellat accusantium, fuga
-                                tenetur
-                                excepturi ab iure. Voluptas quasi dicta omnis.</p>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <img class="img-fluid" src="Webdesign%2010/img/team-work.jpg" alt="Team Work">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<h2 class="text-center">About Me</h2>
+
+<div class="row align-items-center">
+
+<div class="col-md-6">
+
+<p>
+Hello, I am Anika Tabassum. I have completed SSC from Barishal Govt. Girls' High School and HSC from Barishal Government Women's College.
+</p>
+
+<p>
+Currently I am studying Computer Science and Engineering at University of Asia Pacific.
+</p>
+
+<p>
+I am passionate about technology, leadership and learning new ideas. My goal is to become a successful engineer.
+</p>
+
+</div>
+
+<div class="col-md-6 text-center">
+
+<img src="img/6.jpg" width="400" class="about-img">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
-        <!-- Fifth section -->
-        <section id="contact">
-            <div class="contact">
-                <hr class="m-0">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="contact-form col-12 col-sm-6 col-md-7">
-                            <h2>Contact</h2>
-                            <form action="mailto:example@example.com" method="post" class="needs-validation" novalidate>
-                                <div class="form-group mt-5">
-                                    <label class="col-12">Full Name</label>
-                                    <input class="col-12" type="text" id="fname" placeholder="Full name" name="fname"
-                                        required>
-                                    <div class="invalid-feedback warning">Please write a full name.</div>
-                                </div>
-                                <div class="form-group mt-5">
-                                    <label class="col-12">E-mail</label>
-                                    <input class="col-12" type="email" id="email" placeholder="E-mail" name="email"
-                                        required>
-                                    <div class="invalid-feedback warning">Please write a correct e-mail.</div>
-                                </div>
-                                <div class="form-group mt-5">
-                                    <label class="col-12">Message</label>
-                                    <input class="col-12" type="text" id="message" placeholder="Message" name="message"
-                                        required>
-                                    <div class="invalid-feedback warning">Please write a message.</div>
-                                </div>
-                                <div class="form-group row justify-content-end">
-                                    <div class="col-12 col-lg-5 mb-5 justify-content-start justify-content-sm-end">
-                                        <button type="submit" name="submit" class="main-button">Send message</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="media row my-5">
-                                <div class="col-12 col-lg-4">
-                                    <p>Social media</p>
-                                    <p class="warning">
-                                        <a href="https://www.instagram.com/" target="_blank">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
-                                        <a href="https://www.facebook.com/" target="_blank">
-                                            <i class="bi bi-facebook"></i>
-                                        </a>
-                                        <a href="https://twitter.com/" target="_blank">
-                                            <i class="bi bi-twitter"></i>
-                                        </a>
-                                        <a href="https://linkedin.com/" target="_blank">
-                                            <i class="bi bi-linkedin"></i>
-                                        </a>
-                                    </p>
-                                </div>
-                                <div class="col-12 col-lg-4 mt-5 mt-md-0">
-                                    <p>Contact me via e-mail</p>
-                                    <a href="mailto:example@example.com" class="warning">example@example.com</a>
-                                </div>
-                                <div class="col-12 col-lg-4 mt-5 mt-md-0">
-                                    <p>My phone</p>
-                                    <a href="tel:+00-000-00-00" class="warning">+00 000 00 00</a>
-                                </div>
-                            </div>
-                            <div class="footer d-none d-md-block">
-                                <div class="row justify-content-start align-items-end">
-                                    <div class="col-3">
-                                        <img src="Webdesign%2010/img/icons/firmbee.svg" alt="firmbee">
-                                    </div>
-                                    <div class="col-9">
-                                        <span>© 2022-23 Firmbee. Design with by <a
-                                                href="https://firmbee.com/solutions/free-invoicing-app-billing-software"
-                                                title="Firmbee - Online Remote working app for collaboration & task management"
-                                                target="_blank">Firmbee</a></span>
-                                    </div>
-                                </div>
-                            </div>
+<!-- Achievements -->
 
-                            <button class="up" onclick="topFunction()" id="top" title="Go to top">
-                                <i class="bi bi-arrow-up"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="map">
-                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0"
-                            marginwidth="0"
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=16.814528927206997%2C51.03634857103406%2C17.15098522603512%2C51.1575203446024&amp;layer=mapnik&amp;marker=51.09697415177232%2C16.982757076621056"></iframe>
-                    </div>
-                </div>
-                <div class="footer d-md-none">
-                    <div class="container">
-                        <div class="row justify-content-start align-items-end">
-                            <div class="col-3">
-                                <img src="Webdesign%2010/img/icons/firmbee.svg" alt="firmbee">
-                            </div>
-                            <div class="col-9">
-                                <span>© 2022-23 Firmbee. Design with by <a
-                                        href="https://firmbee.com/solutions/free-invoicing-app-billing-software"
-                                        title="Firmbee - Online Remote working app for collaboration & task management"
-                                        target="_blank">Firmbee</a></span>
-                            </div>
-                        </div>
+<section id="achievements" class="p-5">
 
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<div class="container">
 
-    <!-- Bootstrap core JavaScript
-            ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+<h2 class="text-center">Achievements</h2>
 
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<div class="row text-center">
 
-    <!-- Isotope gallery -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <!-- or -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<div class="col-md-3">
 
-    <!-- Custom JS codes -->
-    <script src="Webdesign%2010/js/gallery.js"></script>
-    <script src="Webdesign%2010/js/slides.js"></script>
-    <script src="Webdesign%2010/js/scrolls.js"></script>
-    <script src="Webdesign%2010/js/validation.js"></script>
+<div class="card p-3">
+<h5>Academic Result</h5>
+<p>GPA 5 in SSC & HSC</p>
+</div>
 
-    <!--
-    This template is licenced under Attribution 3.0 (CC BY 3.0 PL),
-    You are free to: Share and Adapt. You must give appropriate credit, you may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-    -->
+</div>
+
+<div class="col-md-3">
+
+<div class="card p-3">
+<h5>Leadership</h5>
+<p>School Cabinet President</p>
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card p-3">
+<h5>Coordinator</h5>
+<p>Coordinator in Different Platforms</p>
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card p-3">
+<h5>Volunteer</h5>
+<p>UAP DSW Central Volunteer</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer class="text-center p-3">
+
+<p>© 2026 Anika Tabassum</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
 </html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Anika</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+background:#f5e6d3;
+}
+
+.navbar{
+background:#8b6f47 !important;
+}
+
+.form-box{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.btn-custom{
+background:#8b6f47;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">Back to Home</a>
+
+</div>
+
+</nav>
+
+<section class="p-5">
+
+<div class="container">
+
+<h2 class="text-center mb-4">Contact With Me</h2>
+
+<div class="row justify-content-center">
+
+<div class="col-md-6">
+
+<div class="form-box">
+
+<form>
+
+<div class="mb-3">
+<label>Name</label>
+<input type="text" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label>Email</label>
+<input type="email" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label>Topic</label>
+<textarea class="form-control" rows="4" required></textarea>
+</div>
+
+<button class="btn btn-custom w-100">Submit</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
+```
+
